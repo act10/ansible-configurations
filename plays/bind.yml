@@ -1,0 +1,8 @@
+---
+
+- name: bind_master.yml | All roles
+  hosts: bind_master
+  become: True
+
+  roles:
+    - { role: bind,            tags: ["bind"] }

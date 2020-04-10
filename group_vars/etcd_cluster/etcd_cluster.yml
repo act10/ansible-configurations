@@ -1,0 +1,2 @@
+etcd_secure: False
+etcd_cluster_name: wa

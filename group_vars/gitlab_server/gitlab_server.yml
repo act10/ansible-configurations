@@ -1,0 +1,4 @@
+---
+gitlab_external_url: "http://gitlab.devopsua.tk/"
+gitlab_redirect_http_to_https: "false"
+gitlab_create_self_signed_cert: "false"

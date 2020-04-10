@@ -1,0 +1,8 @@
+---
+
+- name: consul.yml | All roles
+  hosts: consul
+  become: True
+
+  roles:
+    - { role: brianshumate.consul,           tags: ["consul"] }
