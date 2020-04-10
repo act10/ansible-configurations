@@ -1,0 +1,37 @@
+---
+bind_zone_dir: /var/local/named-zones
+bind_zone_file_mode: '0660'
+bind_allow_query:
+  - any
+bind_listen_ipv4:
+  - any
+bind_listen_ipv6:
+  - none
+bind_acls:
+  - name: acl1
+    match_list:
+      - 172.16.0.0/16
+bind_forwarders:
+  - '8.8.8.8'
+  - '8.8.4.4'
+bind_recursion: true
+bind_query_log: 'data/query.log'
+bind_check_names: 'master ignore'
+bind_zone_master_server_ip: "172.16.160.142"
+bind_zone_minimum_ttl: "2D"
+bind_zone_ttl: "2W"
+bind_zone_time_to_refresh: "2D"
+bind_zone_time_to_retry: "2H"
+bind_zone_time_to_expire: "2W"
+bind_zone_domains:
+  - name: 'devopsua.tk'
+    networks:
+      - '172.16.160'
+    name_servers:
+      - ns1.deopvsua.tk.
+      - ns2.devopsua.tk.
+    hosts:
+      - name: ns1
+        ip: 172.16.160.142
+      - name: ns2
+        ip: 172.16.160.148

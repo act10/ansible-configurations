@@ -1,0 +1,8 @@
+---
+
+- name: minio.yml | All roles
+  hosts: minio
+  become: True
+
+  roles:
+    - { role: minio,           tags: ["minio"] }
