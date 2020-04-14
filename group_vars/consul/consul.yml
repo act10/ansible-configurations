@@ -1,3 +1,4 @@
-consul_datacenter: "wa"
+vault_consul_datacenter: "{{ lookup('hashi_vault', 'secret=kv/data/wa/consul') }}"
+consul_datacenter: "{{ vault_consul_datacenter.data.datacenter }}"
 consul_group_name: "consul"
 consul_client_address: "0.0.0.0"

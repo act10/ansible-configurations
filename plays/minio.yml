@@ -1,6 +1,6 @@
 ---
 
-- name: minio.yml | All roles
+- name: minio_internal.yml | All roles
   hosts: minio
   become: True
 
