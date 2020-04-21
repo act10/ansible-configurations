@@ -12,3 +12,4 @@ dependencies:
   - {role: andrewrothstein.etcd,           tags: etcd }
   - {role: andrewrothstein.unarchive-deps, tags: unarchive-deps }
   - {role: brianshumate.consul,            tags: consul }
+  - {role: riemers.gitlab-runner,          tags: gitlab-runner }

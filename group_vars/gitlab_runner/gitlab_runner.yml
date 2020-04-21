@@ -1,0 +1,17 @@
+vault_gitlab_runner_registration_token:  "{{ lookup('hashi_vault', 'secret=kv-2/data/wa/gitlab') }}"
+gitlab_runner_system_mode: 'no'
+gitlab_runner_coordinator_url: "https://gitlab.devopsua.tk"
+gitlab_runner_registration_token: "{{ vault_gitlab_runner_registration_token.data.gitlab_runner_registration_token }}"
+gitlab_runner_runners:
+  - name: 'Docker GitLab Runner'
+    executor: 'docker'
+    docker_image: 'alpine'
+    run_untagged: false
+    locked: true
+    docker_privileged: true
+    extra_configs:
+      runners.docker:
+        memory: 2048m
+    tags:
+      - mytag
+      - anothertag
