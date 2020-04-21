@@ -1,0 +1,8 @@
+---
+
+- name: gitlab_runner.yml | All roles
+  hosts: gitlab_runner
+  remote_user: root
+
+  roles:
+    - { role: riemers.gitlab-runner,            tags: ["gitlab-runner"] }
